@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My HLS Video</title>
+  <!-- Include Video.js CSS -->
+  <link href="https://vjs.zencdn.net/7.16.0/video-js.css" rel="stylesheet" />
+
+  <!-- Include Video.js -->
+  <script src="https://vjs.zencdn.net/7.16.0/video.min.js"></script>
+
+  <!-- Include Video.js HLS Plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-http-streaming/2.11.0/videojs-http-streaming.min.js"></script>
+</head>
+<body>
+  <video id="my-video" class="video-js" controls preload="auto" width="640" height="360" data-setup="{}">
+    <source src="https://drevent01hls.akamaized.net/hls/live/2014198/drevent01/master500.m3u8" type="application/x-mpegURL">
+    <!-- Fallback for browsers that don't support HLS -->
+    <p class="vjs-no-js">
+      To view this video, please enable JavaScript or consider upgrading your browser.
+      <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noopener">supports HTML5 video</a>
+    </p>
+  </video>
+
+  <script>
+    // Initialize Video.js player
+    var player = videojs('my-video');
+  </script>
+</body>
+</html>
